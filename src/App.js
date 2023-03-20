@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Navbar from './components/header/Navbar'
+import Newnav from './components/newnavbar/newnav'
+import Maincomp from './components/home/Maincomp';
+import Footer from './components/footer/Footer';
+import SignIn from './components/signup_sign/Sign_in';
+import SignUp from './components/signup_sign/SignUp';
+import Cart from './components/cart/Cart';
+import Buynow from './components/buynow/Buynow';
+import{Routes,Route} from "react-router-dom"
+import { useState } from 'react';
 
 function App() {
+  const [data,setData] = useState("")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Navbar setData={setData}/>
+    <Newnav/>
+    <Routes>
+      <Route path="/" element={<Maincomp/>} />
+      <Route path="/login" element={<SignIn data={data}/>} />
+      <Route path="/register" element={<SignUp />} />
+      <Route path='/getproductsone/:id' element={<Cart/>}/>
+      <Route path='/buynow' element={<Buynow/>}/>
+    </Routes>
+    <Footer/>
+    </>
   );
 }
 
