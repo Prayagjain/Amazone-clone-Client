@@ -45,7 +45,7 @@ const Navbar = () => {
   const cartCount = useSelector(state => state.cart);
 
   const getCartData = async () => {
-    const getCart = await fetch(`/getcartdata`, {
+    const getCart = await fetch(`https://e-commerce-clone.onrender.com/getcartdata`, {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -76,7 +76,7 @@ const Navbar = () => {
 
   const userLogout = async () => {
     handleDrClose()
-    const uLogout = await fetch(`/logout`, {
+    const uLogout = await fetch(`https://e-commerce-clone.onrender.com/logout`, {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -96,7 +96,7 @@ const Navbar = () => {
 
   const getUserData = async () => {
     handleDrClose()
-    const uLogout = await fetch(`/getuserdata`, {
+    const uLogout = await fetch(`https://e-commerce-clone.onrender.com/getuserdata`, {
       method: "GET",
       headers: {
         Accept: "application/json",
