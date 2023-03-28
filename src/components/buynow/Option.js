@@ -10,7 +10,7 @@ const Option = ({ data,quantity }) => {
     const dispatch = useDispatch();
 
     const deleteProduct = async () => {
-        const res = await fetch("/deleteproduct", {
+        const res = await fetch("https://e-commerce-clone.onrender.com/deleteproduct", {
             method: "DELETE",
             headers: {
                 Accept: "application/json",
@@ -33,7 +33,7 @@ const Option = ({ data,quantity }) => {
     };
 
     const updateCart = async (value) => {
-        const res = await fetch("/updatecart", {
+        const res = await fetch("https://e-commerce-clone.onrender.com/updatecart", {
             method: "PUT",
             headers: {
                 Accept: "application/json",
