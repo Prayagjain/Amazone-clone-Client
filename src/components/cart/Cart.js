@@ -14,7 +14,7 @@ const Cart = ({ setData }) => {
     const [indvData, setIndvData] = useState([]);
 
     const getIndvData = async () => {
-        const res = await fetch(`/getproductsone/${id}`, {
+        const res = await fetch(`https://e-commerce-clone.onrender.com/getproductsone/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -35,7 +35,7 @@ const Cart = ({ setData }) => {
     }, [id]);
 
     const addToCart = async (id) => {
-        const addCart = await fetch(`/addtocart/${id}`, {
+        const addCart = await fetch(`https://e-commerce-clone.onrender.com/addtocart/${id}`, {
             method: "POST",
             headers: {
                 Accept: "application/json",
