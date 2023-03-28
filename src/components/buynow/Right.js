@@ -22,6 +22,7 @@ const Right = ({ items }) => {
 
   useEffect(() => {
     totalAmount();
+    // eslint-disable-next-line
   }, [items])
 
   return (
