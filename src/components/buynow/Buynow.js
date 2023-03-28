@@ -14,7 +14,7 @@ const Buynow = () => {
     const cartCount = useSelector(state => state.cart);
 
     const getdatabuy = async () => {
-        const res = await fetch("/getcartdata", {
+        const res = await fetch("https://e-commerce-clone.onrender.com/getcartdata", {
             method: "GET",
             headers: {
                 Accept: "application/json",
