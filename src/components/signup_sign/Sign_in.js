@@ -30,7 +30,7 @@ const Sign_in = () => {
         e.preventDefault();
         const {email,password} = logdata;
 
-        const res = await fetch('/login',{
+        const res = await fetch('https://e-commerce-clone.onrender.com/login',{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
