@@ -26,7 +26,7 @@ const SignUp = () => {
         e.preventDefault();
         const {fname,email,mobile,password} = udata;
 
-        const res = await fetch('/registeruser',{
+        const res = await fetch('https://e-commerce-clone.onrender.com/registeruser',{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
