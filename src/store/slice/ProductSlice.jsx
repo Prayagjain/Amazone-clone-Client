@@ -3,7 +3,7 @@ import {createSlice,createAsyncThunk} from '@reduxjs/toolkit'
 export const fetchProductsData = createAsyncThunk(
     'fetchProducts',
     async () => {
-        const data = await fetch("/getproductsdata",{
+        const data = await fetch("https://e-commerce-clone.onrender.com/getproductsdata",{
             method:"GET",
             headers:{
                 "Content-Type":"application/json"
